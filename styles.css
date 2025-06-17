@@ -1,0 +1,109 @@
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg,rgba(10,245,221,1)0%,rgba(34,199,180,1)35%,rgba(24,157,184,1)100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+.weatherForm{
+    margin: 20px;
+}
+.cityInput{
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid hsl(0, 0%,20%, 0.3);
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+}
+button[type="submit"]{
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: hsl(122, 62%, 50%);
+    font-weight: bold;
+    border: 2px sloid hsl(0, 0%,20%, 0.3);
+    border-radius: 10px;
+    border: none;
+    color:hsl(0, 0%, 110%);
+
+}
+button[type="submit"]:hover{
+ background-color: hsl(122, 62%, 40%);
+ transform: scale(1.1);
+}
+.card{
+    padding:50px 30px 70px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.15); 
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); /* Lighter, more diffused shadow */ 
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Thinner, semi-transparent white border */
+    inset :0 0 10px rgba(255, 255, 255, 0.1);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+} 
+h1{
+    
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+p{
+    font-size:1.5rem;
+    margin: 5px 0;
+    
+}
+.cityDisplay,.tempDisplay{
+font-size:3.5rem ;
+font-weight: bold;
+color:hsla(0,0%,0%, 0.75);
+margin-bottom: 25px;
+
+}
+.humidityDisplay{
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.descriptionDisplay{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.weatherEmoji{
+    margin:0;
+    font-size: 5rem;
+}
+.errorDisplay{
+    font-size: 2rem;
+    font-weight: bold;
+    color:hsla(0,0%,0%, 0.75);
+}
+/* responsive design */
+@media(max-width:767px){
+html{
+    font-size: 12px;
+}
+.card{
+
+    font-size: 0.95rem;
+    max-width: 15vw;
+}
+.cityInput{
+    padding:10px;
+    font-size: 1rem;
+    margin-left: 0;
+    width:130px;
+}
+button[type="submit"]{
+    margin: 0;
+    padding: 10px 10px;
+
+}
+
+}
