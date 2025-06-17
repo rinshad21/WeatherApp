@@ -11,6 +11,7 @@ A basic weather app that lets you check the current weather in any city using th
   - 💧 Humidity
   - 🌤 Weather condition
   - ✅ Emoji based on weather type
+  - change background according to weather 
   - glass design
 - Handles empty input and API errors gracefully
 
