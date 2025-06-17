@@ -66,6 +66,7 @@ function displayWeatherinfo(data) {
     humidityDisplay.textContent = `Humidity : ${humidity}%`;
     descriptionDisplay.textContent = `${description}`
     weatherEmoji.textContent = getWeatherEmoji(id);
+    
 
 //assign class for api
     cityDisplay.classList.add("cityDisplay");
@@ -73,7 +74,7 @@ function displayWeatherinfo(data) {
     humidityDisplay.classList.add("humidityDisplay");
     descriptionDisplay.classList.add("descriptionDisplay");
     weatherEmoji.classList.add("weatherEmoji")
-
+    changeBackgroundWeather(id);
 
 
 //appending result to card
@@ -90,12 +91,12 @@ function displayWeatherinfo(data) {
 function getWeatherEmoji(WeatherId) {
     switch (true) {
         case (WeatherId >= 200 && WeatherId < 300):
-            return "🌨";
+     return "🌨"     
         case (WeatherId >= 300 && WeatherId < 400):
             return "🌧";
         case (WeatherId >=500 && WeatherId <600):
             return "🌧";
-        case (WeatherId >=600 && WeatherId < 700):
+        case (WeatherId >= 600 && WeatherId < 700):
             return "❄";
         case (WeatherId >=700 && WeatherId < 800):
             return "🌫";
@@ -109,6 +110,40 @@ function getWeatherEmoji(WeatherId) {
 
     
 }
+//change background color according to weather
+function changeBackgroundWeather(WeatherId) {
+    
+
+    switch (true) {
+case (WeatherId >= 200 && WeatherId < 300):
+    document.body.style.backgroundImage = "linear-gradient(to right, #232526, #414345)"; // Thunderstorm
+    break;
+case (WeatherId >= 300 && WeatherId < 400):
+    document.body.style.backgroundImage = "linear-gradient(to right, #485563, #29323c)"; // Drizzle
+    break;
+case (WeatherId >= 500 && WeatherId < 600):
+    document.body.style.backgroundImage="linear-gradient(to right, #2c3e50, #3498db)";// Rain
+    break;
+case (WeatherId >= 600 && WeatherId < 700):
+    document.body.style.backgroundImage= "linear-gradient(to right, #e6dada, #274046)";// Snow
+    break;
+case (WeatherId >= 700 && WeatherId < 800):
+    document.body.style.backgroundImage = "linear-gradient(to right, #bdc3c7, #2c3e50)";// Atmosphere
+    break;
+case (WeatherId === 800):
+    document.body.style.backgroundImage = "linear-gradient(to right,rgb(235, 237, 108),rgb(237, 215, 47))"; // Clear
+    break;
+case (WeatherId > 800 && WeatherId <= 810):
+    document.body.style.backgroundImage= "linear-gradient(to right, #ffffff, #e0e0e0)"; // Clouds
+    break;
+
+default:
+      document.body.style.backgroundImage= "linear-gradient(90deg,rgba(10,245,221,1)0%,rgba(34,199,180,1)35%,rgba(24,157,184,1)100%)"
+    break;
+    }
+    
+}
+
 //function to display error messages
 
 function displayError(message) {
