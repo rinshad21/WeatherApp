@@ -26,5 +26,5 @@ A basic weather app that lets you check the current weather in any city using th
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/weather-app.git
+   git clone https://github.com/rinshad21/weather-app.git
 2.check my hosted website
